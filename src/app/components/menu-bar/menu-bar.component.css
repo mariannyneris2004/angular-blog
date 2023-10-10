@@ -1,0 +1,17 @@
+.menu__container {
+  margin: 20px;
+}
+
+.menu__container > ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu__container > ul > li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+.menu__container > ul > li > a {
+  text-decoration: none;
+}
