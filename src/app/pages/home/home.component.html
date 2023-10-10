@@ -1,21 +1,45 @@
-<header>
-  <app-menu-bar></app-menu-bar>
-</header>
-
 <app-title></app-title>
 
 <div class="articules">
   <div class="articules__main">
-    <app-big-card photoCover="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
-    cardTitle="Título do destaque principal"
-    cardDescription="Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto "></app-big-card>
+    <ng-container *ngFor="let article of articles">
+      <ng-container *ngIf="article.id == '1'">
+        <app-big-card
+          [Id]="article.id"
+          [photoCover]="article.photo"
+          [cardTitle]="article.title"
+          [cardDescription]="article.description"
+        ></app-big-card>
+      </ng-container>
+    </ng-container>
   </div>
+
   <div class="articules__others">
-    <app-small-card photoCover="https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=170667a&w=0&k=20&c=Q7gLG-xfScdlTlPGFohllqpNqpxsU1jy8feD_fob87U="
-    cardTitle="Título de uma notícia com destaque menor"></app-small-card>
-    <app-small-card photoCover="https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=170667a&w=0&k=20&c=Q7gLG-xfScdlTlPGFohllqpNqpxsU1jy8feD_fob87U="
-    cardTitle="Título de uma notícia com destaque menor 2"></app-small-card>
-    <app-small-card photoCover="https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=170667a&w=0&k=20&c=Q7gLG-xfScdlTlPGFohllqpNqpxsU1jy8feD_fob87U="
-    cardTitle="Título de uma notícia com destaque menor 3"></app-small-card>
-  </div>
+    <ng-container *ngFor="let article of articles">
+      <ng-container *ngIf="article.id == '2'">
+        <app-small-card
+          [Id]="article.id"
+          [photoCover]="article.photo"
+          [cardTitle]="article.title"
+        ></app-small-card>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngFor="let article of articles">
+      <ng-container *ngIf="article.id == '3'">
+        <app-small-card
+          [Id]="article.id"
+          [photoCover]="article.photo"
+          [cardTitle]="article.title"
+        ></app-small-card>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngFor="let article of articles">
+      <ng-container *ngIf="article.id == '4'">
+        <app-small-card
+          [Id]="article.id"
+          [photoCover]="article.photo"
+          [cardTitle]="article.title"
+        ></app-small-card>
+      </ng-container>
+    </ng-container>
 </div>
